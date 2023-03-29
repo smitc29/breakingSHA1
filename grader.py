@@ -12,8 +12,7 @@ import existingAttack
 
 # If you want to try out other messages, do it separately.
 # This is the message you must inject your username into.
-MESSAGE = b"Hello student of cryptography! Have fun :)"
-
+MESSAGE = b"Hello cryptographer! Have a nice day :)"
 
 parser = argparse.ArgumentParser(description="Grades the length extension attack on SHA1.")
 parser.add_argument("username", help="your GT username (e.g. djoyner3)")
