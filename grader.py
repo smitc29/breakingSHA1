@@ -3,15 +3,10 @@
 import random
 import string
 import argparse
-
 import oracle, crypto
 import student
 
-import existingAttack
-
-
-# If you want to try out other messages, do it separately.
-# This is the message you must inject your username into.
+# This is the message provided injection text is appended to
 MESSAGE = b"Hello cryptographer! Have a nice day :)"
 
 parser = argparse.ArgumentParser(description="Grades the length extension attack on SHA1.")
