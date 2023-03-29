@@ -51,7 +51,7 @@ elif oracle.check(message, tag):
               "extension attack against SHA1!")
     else:
         print("However, it looks like you successfully forged a message, but didn't "
-              "include your GT username or the original message in your forgery.")
+              "include your username or the original message in your forgery.")
 
 else:
     print("TEST FAILED")
