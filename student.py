@@ -25,18 +25,17 @@ def getIntListFromHash(hash):
 
 def main(message: bytes, injection: bytes) -> Tuple[bytes, str]:
     """ 
-    Your goal is to bypass the oracle's integrity check.
+    This script tries to bypass the oracle.py file's integrity check. (See line 76)
 
-    This will break UF-CMA security of the scheme and demonstrate a length
-    extension attack on the underlying SHA1 hash function, which relies on the
-    Merkle-Damgard construction internally.
+    This will break UF-CMA security (Unforgeability under Chosen Message Attack) 
+    of the scheme and demonstrate a length extension attack on the underlying 
+    SHA1 hash function, which relies on the Merkle-Damgard construction internally.
 
-    Specifically, you must somehow craft a message that includes the given
-    parameter WITHIN the default message AND find a valid tag for it WITHOUT
-    querying the oracle.
+    Specifically, it generates a message that includes a given
+    parameter (see 'injection' on line 26) WITHIN the default message AND 
+    finds a valid tag for it WITHOUT querying the oracle.
 
-    The attack should be able to inject any message you want, but we want you
-    to include your username (as bytes) specifically.
+    The attack should be able to inject any message you want, in theory.
     """
     # Get original tag, prints out original message and tag
     original_tag = oracle.query(message)
